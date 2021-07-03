@@ -3,11 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>MyApp</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="app.js"></script>
+
 </head>
-<body>
-  <app-root></app-root>
+
+<body ng-app="myFirstApp">
+  
+ 
+ <div ng-controller="myFirstController">
+
+<p>
+	<h3>My name is: {{name}} </h3>
+	<input type="text" ng-model="name" >
+	<input type="button" value="click_here" ng-click="sayHello('sasi')">
+	<!--Inside my input is: {{sayHello()}} -->
+	<h3>My name is: {{myname}} </h3>
+	
+</p>
+
+</div>
+
+
 </body>
 </html>
